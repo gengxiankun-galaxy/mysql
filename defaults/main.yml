@@ -1,0 +1,10 @@
+---
+# defaults file for mysql
+
+MYSQL_CONTAINER_NAME: 'mysql'
+MYSQL_PORT: 3306
+MYSQL_ROOT_PASSWORD: juvcjqamsicu3
+MYSQL_ADMINER_PORT: 3380
+MYSQL_ADMINER_ENBALE: false
+SRV_PATH: /data/srv
+OPT_PATH: /opt/gengxiankun-galaxy

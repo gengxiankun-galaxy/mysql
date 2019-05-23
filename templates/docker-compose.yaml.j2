@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  db:
+    container_name: {{ MYSQL_CONTAINER_NAME }}
+    image: mysql:5.6
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - {{ MYSQL_PORT }}:3306
+    volumes:
+      - {{ SRV_PATH }}/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: {{ MYSQL_ROOT_PASSWORD }}
+
+{% if MYSQL_ADMINER_ENBALE %}
+  adminer:
+    image: {{ MYSQL_CONTAINER_NAME }}_adminer
+    restart: always
+    ports:
+      - {{ MYSQL_ADMINER_PORT }}:8080
+{% endif %}
