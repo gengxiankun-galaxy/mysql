@@ -6,9 +6,7 @@ Deploy the MySQL service running under the container via ansible.
 Installation
 ------------
 
-```bash
-ansible-galaxy install -p /etc/ansible/roles gengxiankun.mysql
-```
+`ansible-galaxy install gengxiankun.mysql`
 
 Requirements
 ------------
