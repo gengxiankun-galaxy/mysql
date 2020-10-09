@@ -7,6 +7,9 @@
 - name: 预处理 - 创建部署目录
   shell: '[[ ! -d "{{ OPT_PATH }}/{{ MYSQL_CONTAINER_NAME }}" ]] && mkdir -vp {{ OPT_PATH }}/{{ MYSQL_CONTAINER_NAME }}'
 
+- name: 配置环境变量
+  copy: src=files/mysql.env dest={{ OPT_PATH }}/{{ MYSQL_CONTAINER_NAME }}/.env
+
 - name: 编排 docker-compose.yaml
   template: src=docker-compose.yaml.j2 dest={{ OPT_PATH }}/{{ MYSQL_CONTAINER_NAME }}/docker-compose.yaml
 

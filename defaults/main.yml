@@ -1,6 +1,8 @@
 ---
 # defaults file for mysql
 
+OPT_PATH: /opt/gengxiankun-galaxy
+
 MYSQL_CONTAINER_NAME: 'mysql'
 MYSQL_PORT: 3306
 MYSQL_ROOT_PASSWORD: root
@@ -8,4 +10,3 @@ MYSQL_ADMINER_PORT: 3380
 MYSQL_ADMINER_ENBALE: false
 MYSQL_VOLUME: 'mysql'
 MYSQL_VERSION: 5.6
-OPT_PATH: /opt/gengxiankun-galaxy
