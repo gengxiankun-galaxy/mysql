@@ -25,6 +25,7 @@ Role Variables
 | MYSQL_ADMINER_PORT | MySQL adminer 对外端口 |
 | MYSQL_ADMINER_ENBALE | 是否启用 MySQL adminer  |
 | MYSQL_VOLUME | MySQL 容器数据持久化卷标 |
+| MYSQL_VERSION | MySQL Docker 镜像版本 |
 
 Example Playbook
 ----------------
