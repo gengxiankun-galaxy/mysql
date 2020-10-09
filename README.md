@@ -1,7 +1,7 @@
 MySQL
 =========
 
-Deploy the MySQL service running under the container via ansible.
+通过 ansible 部署在容器下运行的 MySQL 服务。
 
 Installation
 ------------
@@ -18,18 +18,16 @@ Role Variables
 
 | parameter | description |
 | --------- | ----------- |
-| MYSQL_CONTAINER_NAME | MySQL container name |
-| MYSQL_PORT | MySQL port |
-| MYSQL_ROOT_PASSWORD | MySQL root password |
-| MYSQL_ADMINER_PORT | MySQL adminer port |
-| MYSQL_ADMINER_ENBALE | MySQL adminer enbale |
-| SRV_PATH | Data persistence base directory |
-| OPT_PATH | Service deployment directory |
+| OPT_PATH | 服务部署目录 |
+| MYSQL_CONTAINER_NAME | MySQL 容器名称 |
+| MYSQL_PORT | MySQL 对外端口 |
+| MYSQL_ROOT_PASSWORD | MySQL root 密码 |
+| MYSQL_ADMINER_PORT | MySQL adminer 对外端口 |
+| MYSQL_ADMINER_ENBALE | 是否启用 MySQL adminer  |
+| MYSQL_VOLUME | MySQL 容器数据持久化卷标 |
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:

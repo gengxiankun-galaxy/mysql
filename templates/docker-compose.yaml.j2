@@ -10,7 +10,7 @@ services:
     ports:
       - {{ MYSQL_PORT }}:3306
     volumes:
-      - {{ SRV_PATH }}/mysql:/var/lib/mysql
+      - {{ MYSQL_VOLUME }}:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: {{ MYSQL_ROOT_PASSWORD }}
 
@@ -21,3 +21,6 @@ services:
     ports:
       - {{ MYSQL_ADMINER_PORT }}:8080
 {% endif %}
+
+volumes:
+  {{ MYSQL_VOLUME }}
